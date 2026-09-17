@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+  <meta name="theme-color" content="#070b12">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>NEON OUTPOST</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="game-shell">
+    <canvas id="game" aria-label="NEON OUTPOST game"></canvas>
+
+    <section id="hud" aria-live="polite">
+      <div class="topbar">
+        <div class="brand">NEON OUTPOST</div>
+        <div class="stat">WAVE <b id="wave">1</b></div>
+        <div class="stat">SCORE <b id="score">0</b></div>
+      </div>
+      <div class="meters">
+        <div><span>HP</span><i><em id="hp-bar"></em></i><b id="hp">100</b></div>
+        <div><span>CORE</span><i><em id="core-bar"></em></i><b id="core">100</b></div>
+        <div><span>ENERGY</span><i><em id="energy-bar"></em></i><b id="energy">100</b></div>
+      </div>
+    </section>
+
+    <section id="start-screen" class="panel">
+      <div class="logo-mark">◇</div>
+      <h1>NEON<br><span>OUTPOST</span></h1>
+      <p>Hold the line. Survive the night.</p>
+      <button id="start">DEPLOY</button>
+      <small>Drag to move • Auto-fire • Desktop: WASD / arrows</small>
+    </section>
+
+    <section id="game-over" class="panel hidden">
+      <div class="logo-mark">×</div>
+      <h2>OUTPOST LOST</h2>
+      <p>Wave <b id="final-wave">1</b> • Score <b id="final-score">0</b></p>
+      <button id="restart">REDEPLOY</button>
+    </section>
+
+    <div id="toast"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
